@@ -32,10 +32,16 @@ fig.savefig("images/markers_triangle.png")
 fig = plt.figure()
 ax = fig.gca()
 N = x.size // 3
-ax.scatter(x[:N], y[:N], marker="o", c="green")
-ax.scatter(x[N: 2 * N], y[N: 2 * N], marker="x", c="blue")
-ax.scatter(x[2 * N:], y[2 * N:], marker="s", c="orange")
+ax.scatter(x[:N], y[:N], marker="o")
+ax.scatter(x[N: 2 * N], y[N: 2 * N], marker="x")
+ax.scatter(x[2 * N:], y[2 * N:], marker="s")
 fig.savefig("images/markers_styled.png")
+
+# Change the marker colors
+fig = plt.figure()
+ax = fig.gca()
+ax.scatter(x, y, c="orange")
+fig.savefig("images/markers_orange.png")
 
 # Vary the marker colors.
 fig = plt.figure()
