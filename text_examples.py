@@ -22,7 +22,7 @@ fig.savefig("images/text_xy_labels_title.png")
 fig = plt.figure()
 ax = fig.gca()
 ax.plot(x, y)
-ax.text(-5, .8, "Text on a plot", fontsize=22)
+ax.text(-5, .8, "Some text", fontsize=22)
 fig.savefig("images/text_any_text.png")
 
 # Align the text.
