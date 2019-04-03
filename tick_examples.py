@@ -34,6 +34,21 @@ ax.set_xlabel("log scale x-axis", fontsize=16)
 ax.set_ylabel("log scale y-axis", fontsize=16)
 fig.savefig("images/axis_log.png")
 
+# Minor ticks.
+fig = plt.figure()
+ax = fig.gca()
+ax.plot(x, y)
+
+from matplotlib.ticker import AutoMinorLocator
+x_minor_locator = AutoMinorLocator()
+ax.xaxis.set_minor_locator(x_minor_locator)
+y_minor_locator = AutoMinorLocator()
+ax.yaxis.set_minor_locator(y_minor_locator)
+
+ax.set_xlabel("minor x-axis ticks", fontsize=16)
+ax.set_ylabel("minor y-axis ticks", fontsize=16)
+fig.savefig("images/axis_tick_minor.png")
+
 # Change tick direction.
 fig = plt.figure()
 ax = fig.gca()
@@ -72,22 +87,7 @@ ax.tick_params(axis="x", labelsize=18, labelrotation=-60, labelcolor="turquoise"
 ax.tick_params(axis="y", labelsize=12, labelrotation=20, labelcolor="orange")
 ax.set_xlabel("big turquoise x-axis ticks", fontsize=16)
 ax.set_ylabel("small orange y-axis ticks", fontsize=16)
-fig.savefig("images/axis_tick_styled.png")
-
-# Minor ticks.
-fig = plt.figure()
-ax = fig.gca()
-ax.plot(x, y)
-
-from matplotlib.ticker import AutoMinorLocator
-x_minor_locator = AutoMinorLocator()
-ax.xaxis.set_minor_locator(x_minor_locator)
-y_minor_locator = AutoMinorLocator()
-ax.yaxis.set_minor_locator(y_minor_locator)
-
-ax.set_xlabel("minor x-axis ticks", fontsize=16)
-ax.set_ylabel("minor y-axis ticks", fontsize=16)
-fig.savefig("images/axis_tick_minor.png")
+fig.savefig("images/axis_tick_label_styled.png")
 
 # Minor tick labels.
 fig = plt.figure()
