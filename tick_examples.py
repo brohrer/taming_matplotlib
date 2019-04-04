@@ -3,13 +3,6 @@ matplotlib.use("agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
-# https://matplotlib.org/api/ticker_api.html
-# https://matplotlib.org/api/_as_gen/matplotlib.pyplot.tick_params.html
-# https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.grid.html#matplotlib.axes.Axes.grid
-# https://matplotlib.org/gallery/ticks_and_spines/major_minor_demo.html
-# https://matplotlib.org/gallery/ticks_and_spines/tick-formatters.html
-# https://matplotlib.org/gallery/ticks_and_spines/tick-locators.html
-
 
 x = np.linspace(1, 13, 500)
 y = 1 + np.sinc(x - 7)
@@ -84,7 +77,6 @@ x_minor_locator = AutoMinorLocator()
 ax.xaxis.set_minor_locator(x_minor_locator)
 y_minor_locator = AutoMinorLocator()
 ax.yaxis.set_minor_locator(y_minor_locator)
-
 ax.set_xlabel("minor x-axis ticks", fontsize=16)
 ax.set_ylabel("minor y-axis ticks", fontsize=16)
 fig.savefig("images/axis_tick_minor.png")
