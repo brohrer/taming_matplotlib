@@ -98,6 +98,3 @@ fig = plt.figure(linewidth=10, edgecolor="#04253a")
 ax = fig.gca()
 ax.plot(x, y)
 fig.savefig("images/framing_fig_frame.png", edgecolor=fig.get_edgecolor())
-
-
-
