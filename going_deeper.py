@@ -1,7 +1,7 @@
 import matplotlib
 matplotlib.use("agg")
 
-from  matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 import numpy as np
 
 
